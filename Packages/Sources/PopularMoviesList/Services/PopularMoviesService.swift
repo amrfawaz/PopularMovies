@@ -27,7 +27,7 @@ public final class DefaultPopularMoviesService: PopularMoviesService {
     }
 
     func canFetechNextPage() -> Bool {
-        return (response.page & response.totalPages == 0) ||  response.totalPages > response.page
+        return (response.page == 0 && response.totalPages == 0) ||  response.totalPages > response.page
     }
 
     func fetchPopularMovies() async -> Result<[Movie], Error> {
@@ -44,6 +44,7 @@ public final class DefaultPopularMoviesService: PopularMoviesService {
 
         do {
             let results = try await network.request(request: request, of: FetchPopularMoviesResponse.self)
+            response = results
             return .success(results.movies)
         } catch {
             return .failure(error)

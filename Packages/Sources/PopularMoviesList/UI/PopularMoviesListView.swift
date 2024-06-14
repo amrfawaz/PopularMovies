@@ -57,14 +57,16 @@ private extension PopularMoviesListView {
                     .listRowSeparator(.hidden)
                     .listRowInsets(EdgeInsets())
                 }
+                .onAppear {
+                    // Trigger pagination when the last movie appears
+                    if movie == viewModel.movies.last {
+                        Task {
+                            await viewModel.fetchPopularMovies()
+                        }
+                    }
+                }
             }
         }
-//        .navigationDestination(for: Movie.self) { giveaway in
-//            GiveawayDetailsView(
-//                viewModel: GiveawayDetailsViewModel(giveaway: giveaway),
-//                path: $path
-//            )
-//        }
     }
 }
 
