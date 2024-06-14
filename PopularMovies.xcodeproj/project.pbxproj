@@ -8,17 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		841BEB052C1BB03F00D36851 /* PopularMoviesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841BEB042C1BB03F00D36851 /* PopularMoviesApp.swift */; };
-		841BEB072C1BB03F00D36851 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841BEB062C1BB03F00D36851 /* ContentView.swift */; };
 		841BEB092C1BB04100D36851 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 841BEB082C1BB04100D36851 /* Assets.xcassets */; };
 		841BEB0C2C1BB04100D36851 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 841BEB0B2C1BB04100D36851 /* Preview Assets.xcassets */; };
+		841BEB172C1BBEB400D36851 /* PopularMoviesList in Frameworks */ = {isa = PBXBuildFile; productRef = 841BEB162C1BBEB400D36851 /* PopularMoviesList */; };
+		841BEB1B2C1CDEE600D36851 /* AppConfigurations in Frameworks */ = {isa = PBXBuildFile; productRef = 841BEB1A2C1CDEE600D36851 /* AppConfigurations */; };
+		841BEB1D2C1CDEE600D36851 /* CoreInterface in Frameworks */ = {isa = PBXBuildFile; productRef = 841BEB1C2C1CDEE600D36851 /* CoreInterface */; };
+		841BEB1F2C1CDEE600D36851 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 841BEB1E2C1CDEE600D36851 /* Networking */; };
+		841BEB212C1CDEE600D36851 /* PopularMoviesList in Frameworks */ = {isa = PBXBuildFile; productRef = 841BEB202C1CDEE600D36851 /* PopularMoviesList */; };
+		841BEB242C1CDF2100D36851 /* AppConfigurations in Frameworks */ = {isa = PBXBuildFile; productRef = 841BEB232C1CDF2100D36851 /* AppConfigurations */; };
+		841BEB262C1CDF2100D36851 /* CoreInterface in Frameworks */ = {isa = PBXBuildFile; productRef = 841BEB252C1CDF2100D36851 /* CoreInterface */; };
+		841BEB282C1CDF2100D36851 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 841BEB272C1CDF2100D36851 /* Networking */; };
+		841BEB2A2C1CDF2100D36851 /* PopularMoviesList in Frameworks */ = {isa = PBXBuildFile; productRef = 841BEB292C1CDF2100D36851 /* PopularMoviesList */; };
+		841BEB2E2C1CE28100D36851 /* AppConfigurations in Frameworks */ = {isa = PBXBuildFile; productRef = 841BEB2D2C1CE28100D36851 /* AppConfigurations */; };
+		841BEB302C1CE28100D36851 /* CoreInterface in Frameworks */ = {isa = PBXBuildFile; productRef = 841BEB2F2C1CE28100D36851 /* CoreInterface */; };
+		841BEB322C1CE28100D36851 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 841BEB312C1CE28100D36851 /* Networking */; };
+		841BEB342C1CE28100D36851 /* PopularMoviesList in Frameworks */ = {isa = PBXBuildFile; productRef = 841BEB332C1CE28100D36851 /* PopularMoviesList */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		841BEB012C1BB03F00D36851 /* PopularMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopularMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		841BEB042C1BB03F00D36851 /* PopularMoviesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMoviesApp.swift; sourceTree = "<group>"; };
-		841BEB062C1BB03F00D36851 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		841BEB082C1BB04100D36851 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		841BEB0B2C1BB04100D36851 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		841BEB182C1CA59300D36851 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		841BEB512C1CE87600D36851 /* Packages */ = {isa = PBXFileReference; lastKnownFileType = text; path = Packages; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +39,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				841BEB1D2C1CDEE600D36851 /* CoreInterface in Frameworks */,
+				841BEB242C1CDF2100D36851 /* AppConfigurations in Frameworks */,
+				841BEB282C1CDF2100D36851 /* Networking in Frameworks */,
+				841BEB172C1BBEB400D36851 /* PopularMoviesList in Frameworks */,
+				841BEB1F2C1CDEE600D36851 /* Networking in Frameworks */,
+				841BEB2A2C1CDF2100D36851 /* PopularMoviesList in Frameworks */,
+				841BEB322C1CE28100D36851 /* Networking in Frameworks */,
+				841BEB302C1CE28100D36851 /* CoreInterface in Frameworks */,
+				841BEB1B2C1CDEE600D36851 /* AppConfigurations in Frameworks */,
+				841BEB342C1CE28100D36851 /* PopularMoviesList in Frameworks */,
+				841BEB2E2C1CE28100D36851 /* AppConfigurations in Frameworks */,
+				841BEB212C1CDEE600D36851 /* PopularMoviesList in Frameworks */,
+				841BEB262C1CDF2100D36851 /* CoreInterface in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,6 +63,7 @@
 			children = (
 				841BEB032C1BB03F00D36851 /* PopularMovies */,
 				841BEB022C1BB03F00D36851 /* Products */,
+				841BEB132C1BBDD200D36851 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,8 +78,9 @@
 		841BEB032C1BB03F00D36851 /* PopularMovies */ = {
 			isa = PBXGroup;
 			children = (
+				841BEB512C1CE87600D36851 /* Packages */,
+				841BEB182C1CA59300D36851 /* Info.plist */,
 				841BEB042C1BB03F00D36851 /* PopularMoviesApp.swift */,
-				841BEB062C1BB03F00D36851 /* ContentView.swift */,
 				841BEB082C1BB04100D36851 /* Assets.xcassets */,
 				841BEB0A2C1BB04100D36851 /* Preview Content */,
 			);
@@ -65,6 +93,13 @@
 				841BEB0B2C1BB04100D36851 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		841BEB132C1BBDD200D36851 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +118,21 @@
 			dependencies = (
 			);
 			name = PopularMovies;
+			packageProductDependencies = (
+				841BEB162C1BBEB400D36851 /* PopularMoviesList */,
+				841BEB1A2C1CDEE600D36851 /* AppConfigurations */,
+				841BEB1C2C1CDEE600D36851 /* CoreInterface */,
+				841BEB1E2C1CDEE600D36851 /* Networking */,
+				841BEB202C1CDEE600D36851 /* PopularMoviesList */,
+				841BEB232C1CDF2100D36851 /* AppConfigurations */,
+				841BEB252C1CDF2100D36851 /* CoreInterface */,
+				841BEB272C1CDF2100D36851 /* Networking */,
+				841BEB292C1CDF2100D36851 /* PopularMoviesList */,
+				841BEB2D2C1CE28100D36851 /* AppConfigurations */,
+				841BEB2F2C1CE28100D36851 /* CoreInterface */,
+				841BEB312C1CE28100D36851 /* Networking */,
+				841BEB332C1CE28100D36851 /* PopularMoviesList */,
+			);
 			productName = PopularMovies;
 			productReference = 841BEB012C1BB03F00D36851 /* PopularMovies.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +161,8 @@
 				Base,
 			);
 			mainGroup = 841BEAF82C1BB03F00D36851;
+			packageReferences = (
+			);
 			productRefGroup = 841BEB022C1BB03F00D36851 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +189,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				841BEB072C1BB03F00D36851 /* ContentView.swift in Sources */,
 				841BEB052C1BB03F00D36851 /* PopularMoviesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,17 +325,19 @@
 				DEVELOPMENT_ASSET_PATHS = "\"PopularMovies/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PopularMovies/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.amr.popularmovies.PopularMovies;
+				PRODUCT_BUNDLE_IDENTIFIER = com.amr.popularmovies;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -302,17 +355,19 @@
 				DEVELOPMENT_ASSET_PATHS = "\"PopularMovies/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PopularMovies/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.amr.popularmovies.PopularMovies;
+				PRODUCT_BUNDLE_IDENTIFIER = com.amr.popularmovies;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -342,6 +397,61 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		841BEB162C1BBEB400D36851 /* PopularMoviesList */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PopularMoviesList;
+		};
+		841BEB1A2C1CDEE600D36851 /* AppConfigurations */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AppConfigurations;
+		};
+		841BEB1C2C1CDEE600D36851 /* CoreInterface */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CoreInterface;
+		};
+		841BEB1E2C1CDEE600D36851 /* Networking */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Networking;
+		};
+		841BEB202C1CDEE600D36851 /* PopularMoviesList */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PopularMoviesList;
+		};
+		841BEB232C1CDF2100D36851 /* AppConfigurations */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AppConfigurations;
+		};
+		841BEB252C1CDF2100D36851 /* CoreInterface */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CoreInterface;
+		};
+		841BEB272C1CDF2100D36851 /* Networking */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Networking;
+		};
+		841BEB292C1CDF2100D36851 /* PopularMoviesList */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PopularMoviesList;
+		};
+		841BEB2D2C1CE28100D36851 /* AppConfigurations */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AppConfigurations;
+		};
+		841BEB2F2C1CE28100D36851 /* CoreInterface */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CoreInterface;
+		};
+		841BEB312C1CE28100D36851 /* Networking */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Networking;
+		};
+		841BEB332C1CE28100D36851 /* PopularMoviesList */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PopularMoviesList;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 841BEAF92C1BB03F00D36851 /* Project object */;
 }
