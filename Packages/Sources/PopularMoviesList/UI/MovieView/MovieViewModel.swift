@@ -5,11 +5,18 @@
 //  Created by AmrFawaz on 14/06/2024.
 //
 
-import Foundation
 import AppConfigurations
+import Combine
+import Foundation
+
+enum MovieViewAction {
+    case didTapMovieCard
+}
 
 final class MovieViewModel: ObservableObject {
     @Published var movie: Movie
+
+    let subject = PassthroughSubject<MovieViewAction, Never>()
 
     init(movie: Movie) {
         self.movie = movie

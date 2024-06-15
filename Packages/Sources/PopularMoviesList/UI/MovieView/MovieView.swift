@@ -5,11 +5,11 @@
 //  Created by AmrFawaz on 14/06/2024.
 //
 
-
-import SwiftUI
 import CoreInterface
+import SwiftUI
 
 struct MovieView: View {
+
     @ObservedObject private var viewModel: MovieViewModel
 
     init(viewModel: MovieViewModel) {
@@ -27,6 +27,9 @@ struct MovieView: View {
         .clipShape(.rect(cornerRadius: Style.Spacing.md))
         .padding(.horizontal, Style.Spacing.md)
         .padding(.top, Style.Spacing.sm)
+        .onTapGesture {
+            viewModel.subject.send(.didTapMovieCard)
+        }
     }
 
     var backgroundImage: some View {

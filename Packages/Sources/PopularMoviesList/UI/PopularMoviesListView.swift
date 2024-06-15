@@ -5,9 +5,10 @@
 //  Created by AmrFawaz on 14/06/2024.
 //
 
+import Combine
 import CoreInterface
-import SwiftUI
 import MovieDetails
+import SwiftUI
 
 public struct PopularMoviesListView: View {
     private enum Constants {
@@ -17,10 +18,12 @@ public struct PopularMoviesListView: View {
     @StateObject private var viewModel = PopularMoviesViewModel(
         services: DefaultPopularMoviesService()
     )
+
     @State private var path = NavigationPath()
-    
+    @State private var cancellables = Set<AnyCancellable>()
+
     public init() {}
-    
+
     public var body: some View {
         NavigationStack(path: $path) {
             content
@@ -51,21 +54,22 @@ private extension PopularMoviesListView {
     }
 
     private var list: some View {
-        LazyVStack(spacing: 0) {
+        LazyVStack {
             ForEach(viewModel.movies) { movie in
-                NavigationLink(value: movie) {
-                    MovieView(viewModel: MovieViewModel(movie: movie))
-                    .listRowSeparator(.hidden)
-                    .listRowInsets(EdgeInsets())
-                }
-                .onAppear {
-                    // Trigger pagination when the last movie appears
-                    if movie == viewModel.movies.last {
-                        Task {
-                            await viewModel.fetchPopularMovies()
+                let movieViewModel = MovieViewModel(movie: movie)
+
+                MovieView(viewModel: movieViewModel)
+                    .onAppear {
+                        // Trigger pagination when the last movie appears
+                        if movie.id == viewModel.movies.last?.id {
+                            Task {
+                                await viewModel.fetchPopularMovies()
+                            }
                         }
                     }
-                }
+                    .onReceive(movieViewModel.subject) { action in
+                        handleMovieViewAction(action, movie: movie)
+                    }
             }
         }
         .navigationDestination(for: Movie.self) { movie in
@@ -73,6 +77,16 @@ private extension PopularMoviesListView {
                 viewModel: MovieDetailsViewModel(movieID: movie.id),
                 path: $path
             )
+        }
+    }
+
+    private func handleMovieViewAction(
+        _ action: MovieViewAction,
+        movie: Movie
+    ) {
+        switch action {
+        case .didTapMovieCard:
+            path.append(movie)
         }
     }
 }
