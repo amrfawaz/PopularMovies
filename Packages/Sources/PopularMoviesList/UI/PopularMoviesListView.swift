@@ -30,10 +30,8 @@ public struct PopularMoviesListView: View {
         NavigationStack(path: $path) {
             content
                 .padding(.vertical, Style.Spacing.md)
-                .onAppear {
-                    Task {
-                        await viewModel.fetchPopularMovies()
-                    }
+                .onFirstAppear {
+                    await viewModel.fetchPopularMovies()
                 }
                 .alert(isPresented: Binding<Bool>(
                     get: { !viewModel.errorMessage.isEmpty },
