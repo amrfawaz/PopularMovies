@@ -8,7 +8,7 @@ Table of contents:
 
 
 ## Getting Started
-To get GamePower application up and running follow this simple step.
+To get PopularMovies application up and running follow this simple step.
 Install applications required in development process.
 
 ## Requirements ##
