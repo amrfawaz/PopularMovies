@@ -49,6 +49,18 @@ let package = Package(
                 "CoreInterface",
                 "AppConfigurations",
                 "Networking"
-            ])
+            ]),
+        .testTarget(
+            name: "MovieDetailsTests",
+            dependencies: ["MovieDetails"],
+            path: "Tests/MovieDetailsTests",
+            sources: ["MovieDetailsViewModelTests.swift"]
+        ),
+        .testTarget(
+            name: "PopularMoviesListTests",
+            dependencies: ["PopularMoviesList"],
+            path: "Tests/PopularMoviesListTests",
+            sources: ["PopularMoviesViewModelTests.swift"]
+        )
     ]
 )

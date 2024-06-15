@@ -11,7 +11,7 @@ import AppConfigurations
 public final class MovieDetailsViewModel: ObservableObject {
     @Published private var movieDetails: MovieDetails?
     
-    private var services: MovieDetailsService?
+    internal var services: MovieDetailsService?
 
     let movieID: Int
 

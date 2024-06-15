@@ -20,9 +20,7 @@ public final class DefaultMovieDetailsService: MovieDetailsService {
     }
 
     func fetchMovieDetails() async -> Result<MovieDetails, Error> {
-         var fetchPopularMoviesRequest = MovieDetailsRequest(movieID: movieID)
-
-        guard let url = fetchPopularMoviesRequest.request?.url else { return .failure(NetworkError.invalidURL) }
+         let fetchPopularMoviesRequest = MovieDetailsRequest(movieID: movieID)
 
         guard let request = fetchPopularMoviesRequest.request else { return .failure(NetworkError.invalidRequest) }
 
@@ -33,6 +31,21 @@ public final class DefaultMovieDetailsService: MovieDetailsService {
             return .success(results)
         } catch {
             return .failure(error)
+        }
+    }
+}
+
+class MockMovieDetailsService: MovieDetailsService {
+    var shouldReturnError = false
+    var movieDetails: MovieDetails?
+
+    func fetchMovieDetails() async -> Result<MovieDetails, Error> {
+        if shouldReturnError {
+            return .failure(NetworkError.noData)
+        } else if let movieDetails = movieDetails {
+            return .success(movieDetails)
+        } else {
+            return .failure(NetworkError.noData)
         }
     }
 }
