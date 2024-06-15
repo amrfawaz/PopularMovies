@@ -12,6 +12,19 @@ public enum NetworkError: Error {
     case invalidURL
     case noData
     case decodingError
+
+    var localizedDescription: String {
+        switch self {
+        case .invalidRequest:
+            return "Invalid Request"
+        case .invalidURL:
+            return "Invalid URL"
+        case .noData:
+            return "No data received"
+        case .decodingError:
+            return "Failed to decode data"
+        }
+    }
 }
 
 public enum HTTPMethod: String {

@@ -13,6 +13,7 @@ import SwiftUI
 public struct PopularMoviesListView: View {
     private enum Constants {
         static let pageTitle = "Explore Popular Movies"
+        static let errorTitle = "Error"
     }
 
     @StateObject private var viewModel = PopularMoviesViewModel(
@@ -21,6 +22,7 @@ public struct PopularMoviesListView: View {
 
     @State private var path = NavigationPath()
     @State private var cancellables = Set<AnyCancellable>()
+    @State private var showAlert = false
 
     public init() {}
 
@@ -32,6 +34,20 @@ public struct PopularMoviesListView: View {
                     Task {
                         await viewModel.fetchPopularMovies()
                     }
+                }
+                .alert(isPresented: Binding<Bool>(
+                    get: { !viewModel.errorMessage.isEmpty },
+                    set: { newValue in
+                        if !newValue {
+                            viewModel.errorMessage = ""
+                        }
+                    }
+                )) {
+                    Alert(
+                        title: Text("Error"),
+                        message: Text(viewModel.errorMessage),
+                        dismissButton: .default(Text("OK"))
+                    )
                 }
         }
     }
@@ -48,7 +64,7 @@ private extension PopularMoviesListView {
     }
 
     var title: some View {
-        Text(PopularMoviesListView.Constants.pageTitle)
+        Text(Constants.pageTitle)
             .typography(.heading01)
             .foregroundStyle(.black)
     }

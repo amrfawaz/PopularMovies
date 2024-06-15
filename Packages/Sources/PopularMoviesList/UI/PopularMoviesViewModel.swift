@@ -9,7 +9,8 @@ import Foundation
 
 public final class PopularMoviesViewModel: ObservableObject {
     @Published var movies: [Movie] = []
-    
+    @Published var errorMessage: String = ""
+
     private let services: PopularMoviesService
 
     init(services: PopularMoviesService) {
@@ -26,8 +27,7 @@ public final class PopularMoviesViewModel: ObservableObject {
                 movies.append(contentsOf: response)
                 break
             case .failure(let error):
-                // Handle failed response.
-                print("Fetch failed: \(error.localizedDescription)")
+                errorMessage = error.localizedDescription
                 break
             }
         }
