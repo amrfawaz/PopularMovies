@@ -7,6 +7,7 @@
 
 import CoreInterface
 import SwiftUI
+import MovieDetails
 
 public struct PopularMoviesListView: View {
     private enum Constants {
@@ -66,6 +67,12 @@ private extension PopularMoviesListView {
                     }
                 }
             }
+        }
+        .navigationDestination(for: Movie.self) { movie in
+            MovieDetailsView(
+                viewModel: MovieDetailsViewModel(movieID: movie.id),
+                path: $path
+            )
         }
     }
 }

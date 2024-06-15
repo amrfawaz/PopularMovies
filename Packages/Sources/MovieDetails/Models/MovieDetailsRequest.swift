@@ -1,24 +1,29 @@
 //
-//  FetchPopularMoviesRequest.swift
+//  MovieDetailsRequest.swift
 //
 //
-//  Created by AmrFawaz on 14/06/2024.
+//  Created by AmrFawaz on 15/06/2024.
 //
 
 import Foundation
 import AppConfigurations
 import Networking
 
-public struct FetchPopularMoviesRequest {
+public struct MovieDetailsRequest {
     private enum Constants {
         static let languageParam = ["language": "en-US"]
-        static let popoularEndpoint = "/popular"
     }
+
+    let movieID: Int
 
     public var params: [String : String] = Constants.languageParam
 
+    public init(movieID: Int) {
+        self.movieID = movieID
+    }
+
     public var request: URLRequest? {
-        let urlString = AppConstants.baseUrl.rawValue + Constants.popoularEndpoint
+        let urlString = AppConstants.baseUrl.rawValue + "/\(movieID)"
 
         guard let url = URL(string: urlString) else { return nil }
 

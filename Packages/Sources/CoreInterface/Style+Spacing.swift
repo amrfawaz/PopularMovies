@@ -44,5 +44,6 @@ public extension Style {
 
     enum Size {
         public static let movieCardHeight: Double = 200
+        public static let moviePosterImageHeight: Double = 300
     }
 }

@@ -20,24 +20,35 @@ let package = Package(
             targets: ["CoreInterface"]),
         .library(
             name: "Networking",
-            targets: ["Networking"])
+            targets: ["Networking"]),
+        .library(
+            name: "MovieDetails",
+            targets: ["MovieDetails"])
     ],
     targets: [
         .target(
             name: "AppConfigurations",
             dependencies: []),
         .target(
-            name: "PopularMoviesList",
-            dependencies: [
-                "CoreInterface",
-                "AppConfigurations",
-                "Networking"
-            ]),
-        .target(
             name: "CoreInterface",
             dependencies: []),
         .target(
             name: "Networking",
             dependencies: []),
+        .target(
+            name: "PopularMoviesList",
+            dependencies: [
+                "CoreInterface",
+                "AppConfigurations",
+                "Networking",
+                "MovieDetails"
+            ]),
+        .target(
+            name: "MovieDetails",
+            dependencies: [
+                "CoreInterface",
+                "AppConfigurations",
+                "Networking"
+            ])
     ]
 )
